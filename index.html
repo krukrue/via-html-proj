@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA</title>
+    <link  href="styles.css" rel="stylesheet" /> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTBw5aIoxp2nMGUKy1TR8TXS6SbpM50gk&callback=console.debug&libraries=maps,marker&v=beta"></script>
+  </head>
+  <body>
+    <header class="bg-black text-white p-4 items-center">
+      <div class="container mx-auto flex justify-between items-center">
+        <div>
+          <a href="./index.html" class="text-2xl font-bold">NASA</a>
+        </div>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="../index.html" class="hover:text-blue-300">Domů</a></li>
+
+            <li><a href="./pages/project-info.html" class="hover:text-blue-300">O projektu</a></li>
+            <li><a href="./pages/articles.html" class="hover:text-blue-300">Články</a></li>
+            <li>
+              <a href="./pages/contact-form.html" id="contactLink" class="hover:text-blue-300">Kontaktovat nas</a>
+            </li>
+            <li class="relative">
+              <a href="#" class="hover:text-blue-300">Prozkoumat</a>
+              <ul class="dropdown space-y-2 absolute hidden bg-black text-white py-2">
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Mise</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Lidé ve Vesmíru</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Země a klima</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Sluneční soustava</a></li>
+                <li><a href="./pages/galerie.html" class="px-4 py-2 hover:bg-blue-700 block">Galerie</a></li>
+                <li><a href="./pages/counter.html" class="px-4 py-2 hover:bg-blue-700 block">Odpočet</a></li>
+
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="content">
+      <section class="text-white bg-blue-800">
+        <div class="container mx-auto p-6 text-center">
+          <h1 class="text-4xl font-bold mb-2">
+            Vítejte ve světě vesmírných událostí!
+          </h1>
+          <p class="text-xl mb-4">
+            Prozkoumejte nejnovější a nadcházející astronomické jevy.
+          </p>
+          <a
+            href="#events"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >Prohlédnout události</a
+          >
+        </div>
+      </section>
+      <section id="events" class="py-8">
+        <section class="container mx-auto p-4">
+          <h3 class="text-2xl text-center text-blue-900 mb-4">Hledat Události</h3>
+          <form id="search-form" class="flex justify-center">
+              <input type="text" id="search-input" class="p-2 border pb-2-2 border pb-2-blue-900 rounded-l" placeholder="Zadejte název události...">
+              <button type="submit" class="bg-blue-900 text-white p-2 rounded-r">Hledat</button>
+          </form>
+        </section>
+        <div class="container mx-auto overflow-y-auto" id="neo" style="max-height: 60vh;">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+                Nadcházející události
+            </h2>
+        </div>
+      </section>
+  
+      <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-6 flex flex-col items-center justify-center">
+          <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+            O Astronomii
+          </h2>
+          <div class="flex justify-center items-center" style="width: 50%">
+            <button id="carouselPrev" class="bg-gray-400 hover:bg-gray-300 flex items-center justify-center w-36 rounded-l h-16">←</button>
+            <div class="carousel relative" id="astronomyCarousel">
+            </div>
+            <button id="carouselNext" class="bg-gray-400 hover:bg-gray-300  flex items-center justify-center w-36 rounded-r h-16">→</button>
+          </div>
+        </div>
+      </section>
+  
+      <section id="photoOfTheDay" class="py-8">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+            Fotografie Dne od NASA
+          </h2>
+          <div id="nasaPhotoContainer" class="flex justify-center flex-wrap md:flex-nowrap">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="faq" class="py-8">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Často kladené otázky</h2>
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Co je NASA?</h3>
+            <p>National Aeronautics and Space Administration, agentura vlády USA pro vědecký a technologický výzkum v letectví a Galerieu.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Jaké byly nejvýznamnější mise NASA?</h3>
+            <p>Mezi nejvýznamnější mise NASA patří Apollo 11, první pilotovaná mise na Měsíc, mise Hubble Space Telescope pro pozorování Galerieu a Mars Rover missions pro průzkum Marsu.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Co je Mezinárodní Galeriená stanice (ISS)?</h3>
+            <p>ISS je Galeriená stanice, nebo obytný satelit, ve Galerieu, který je společným projektem mnoha zemí, včetně NASA. Slouží jako výzkumné laboratoře, kde astronauti provádějí vědecké experimenty.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Jaké technologie vyvinuté NASA jsou používány v každodenním životě?</h3>
+            <p>Mnoho technologií vyvinutých NASA našlo uplatnění v běžném životě, včetně vylepšeného zobrazování v lékařských přístrojích, vývoje paměťové pěny a technologie filtrace vody.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Jak se mohu zapojit do programů NASA?</h3>
+            <p>NASA nabízí různé programy pro veřejnost, včetně stáží, vzdělávacích programů a možností dobrovolného zapojení. Podrobné informace lze najít na oficiálních webových stránkách NASA.</p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 border pb-2">
+            <h3 class="text-xl font-bold mb-2">Jaké byly nejvýznamnější mise NASA?</h3>
+            <p>Mezi nejvýznamnější mise NASA patří Apollo 11, první pilotovaná mise na Měsíc, mise Hubble Space Telescope pro pozorování Galerieu a Mars Rover missions pro průzkum Marsu.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section" style="background-color: black; color: white; padding: 20px;">
+      <div class="container mx-auto flex flex-wrap">
+        <div class="text-content w-full md:w-1/2">
+          <div class="live-broadcast">Live Broadcast</div>
+          <h2>Rover lunar VIPER de la NASA: Watch party de la construcción del robot</h2>
+          <p class="mb-4 text-gray-100">¡Estamos construyendo el primer rover lunar de la NASA, VIPER! Únete a expertos de la misión VIPER y aprende sobre el proceso del montaje.</p>
+          <a href="https://www.nasa.gov/es/" target="_blank">NASA en Español 🌐</a>
+        </div>
+        <div class="video-content w-full md:w-1/2">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/OffTxAiAQfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <div style="height: 500px;">
+      <gmp-map center="38.88310623168945,-77.01628112792969" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="38.88310623168945,-77.01628112792969" title="My location">
+        </gmp-advanced-marker>
+      </gmp-map>
+
+    </div>
+    
+    <footer class="bg-blue-900 text-white text-center p-4" style="position: absolute; bottom: 0; width: 100%;">
+      <p>© 2023 NASA. Všechna práva vyhrazena.</p>
+      <p>
+        Sledujte nás na Sociální sítě
+      </p>
+    </footer>
+  </body>
+</html>
+
+<script src="./script.js"></script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA</title>
+    <link  href="../styles.css" rel="stylesheet" /> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+  <header class="bg-black text-white p-4 items-center">
+    <div class="container mx-auto flex justify-between items-center">
+      <div>
+        <a href="./index.html" class="text-2xl font-bold">NASA</a>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="../index.html" class="hover:text-blue-300">Domů</a></li>
+          <li><a href="./project-info.html" class="hover:text-blue-300">O projektu</a></li>
+          <li><a href="./pages/articles.html" class="hover:text-blue-300">Články</a></li>
+          <li>
+            <a href="./pages/contact-form.html" id="contactLink" class="hover:text-blue-300">Kontaktovat nas</a>
+          </li>
+          <li class="relative">
+            <a href="#" class="hover:text-blue-300">Prozkoumat</a>
+            <ul class="dropdown space-y-2 absolute hidden bg-black text-white py-2">
+              <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Mise</a></li>
+              <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Lidé ve Vesmíru</a></li>
+              <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Země a klima</a></li>
+              <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Sluneční soustava</a></li>
+              <li><a href="./pages/galerie.html" class="px-4 py-2 hover:bg-blue-700 block">Galerie</a></li>
+              <li><a href="./pages/counter.html" class="px-4 py-2 hover:bg-blue-700 block">Odpočet</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="mb-8">
+      <h1 class="text-4xl font-bold text-center mb-4">O projektu</h1>
+      <h2 class="text-2xl text-center mb-2">Vývoj internetových aplikací (VIA)</h2>
+      <p class="text-xl text-center"><strong>Autor projektu:</strong> Nikita Kvashnin</p>
+      <p class="text-xl text-center"><strong>Univerzita:</strong> VŠB - Technická univerzita Ostrava</p>
+    </section>
+    <article class="bg-white shadow-md rounded-lg p-6">
+      <h3 class="text-2xl font-semibold mb-4">Popis projektu</h3>
+      <p class="text-lg mb-4">Tento projekt byl vytvořen v rámci kurzu Vývoj internetových aplikací na VŠB-TUO, který se zaměřuje na moderní přístupy k vývoji webů a internetových aplikací. Cílem projektu je prohloubit znalosti a dovednosti v oblasti front-end vývoje, stejně jako pochopení práce s různými API.</p>
+      <p class="text-lg">Projekt implementuje řadu klíčových funkcionalit, jako je dynamická fotogalerie, odpočítávání času do důležitých událostí a integrace s externími službami poskytujícími data o vesmírnem prostoru.</p>
+    </article>
+  </main>
+
+  <footer class="bg-blue-900 text-white text-center p-4" style="position: absolute; bottom: 0; width: 100%;">
+    <p>© 2023 NASA. Všechna práva vyhrazena.</p>
+    <p>
+      Sledujte nás na Sociální sítě
+    </p>
+  </footer>
+</body>
+</html>

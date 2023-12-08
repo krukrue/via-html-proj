@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA</title>
+    <link  href="../styles.css" rel="stylesheet" /> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="bg-black text-white p-4 items-center">
+      <div class="container mx-auto flex justify-between items-center">
+        <div>
+          <a href="#" class="text-2xl font-bold">NASA</a>
+        </div>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="../index.html" class="hover:text-blue-300">Domů</a></li>
+
+            <li><a href="./project-info.html" class="hover:text-blue-300">O projektu</a></li>
+            <li><a href="./articles.html" class="hover:text-blue-300">Články</a></li>
+            <li>
+              <a href="./contact-form.html" id="contactLink" class="hover:text-blue-300">Kontaktovat nas</a>
+            </li>
+            <li class="relative">
+              <a href="#" class="hover:text-blue-300">Prozkoumat</a>
+              <ul class="dropdown space-y-2 absolute hidden bg-black text-white py-2">
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Mise</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Lidé ve Vesmíru</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Země a klima</a></li>
+                <li><a href="#" class="px-4 py-2 hover:bg-blue-700 block">Sluneční soustava</a></li>
+                <li><a href="./galerie.html" class="px-4 py-2 hover:bg-blue-700 block">Galerie</a></li>
+                <li><a href="./counter.html" class="px-4 py-2 hover:bg-blue-700 block">Odpočet</a></li>
+
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+
+    <section id="contactForm" class="py-8">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+          Kontaktní formulář
+        </h2>
+        <form id="feedbackForm" class="w-full max-w-lg mx-auto">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
+                Jméno
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" type="text" placeholder="Jan Novák">
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                E-mail
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="email@example.com">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="subject">
+                Předmět
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="subject" type="text" placeholder="Předmět zprávy">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+                Zpráva
+              </label>
+              <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="message" placeholder="Vaše zpráva..."></textarea>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                Odeslat
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="bg-blue-900 text-white text-center p-4" style="position: absolute; bottom: 0; width: 100%;">
+      <p>© 2023 NASA. Všechna práva vyhrazena.</p>
+      <p>
+        Sledujte nás na Sociální sítě
+      </p>
+    </footer>
+  </body>
+</html>
+
+
+<script src="./contact-form.js"></script>
